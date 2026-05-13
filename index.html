@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Restaurant landing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -24,7 +25,7 @@
                         <a href="#" class="header__nav-link">Menu</a>
                     </li>
                     <li>
-                        <a href="#" class="header__nav-link">About us</a>
+                        <a href="#about" class="header__nav-link">About us</a>
                     </li>
                     <li>
                         <a href="#" class="header__nav-link">Reservation</a>
@@ -40,8 +41,10 @@
             <div class="header__contacts">
                 <div class="header__phone-block">
                     <div class="header__phone-wrapper">
-                        <img src="icons/phone.svg" alt="Phone" loading="lazy">
-                        <span class="header__phone">+999-888-76-54</span>
+                        <a href="tel:+999-888-76-54" class="header__phone-link">
+                            <img src="icons/phone.svg" alt="Phone" loading="lazy">
+                            <span class="header__phone">+999-888-76-54</span>
+                        </a>
                     </div>
                     <span class="header__phone-sub">Contact us to make a reservation</span>
                 </div>
@@ -52,7 +55,91 @@
 </header>
 
 <main>
-    <section>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <p class="hero__subtitle">Welcome to</p>
+                <h1 class="hero__title">Our restaurant</h1>
+                <div class="hero__divider">
+                    <span>THE HOME OF THE BEST FOOD</span>
+                </div>
+                <a href="#" class="btn btn--outline">VIEW MENU</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <article class="feature-card">
+                <img src="./icons/serving-cloche.svg" alt="Serving cloche" loading="lazy">
+                <p class="feature-card__title">A Magical <span class="feature-card-accent">Atmosphere</span></p>
+                <p class="feature-card__subtitle">Our restaurant has a magical atmosphere filled with delicious
+                    aromas</p>
+            </article>
+            <article class="feature-card">
+                <img src="./icons/serving-cloche.svg" alt="Serving cloche" loading="lazy">
+                <p class="feature-card__title">The Best Quality <span class="feature-card-accent">Food</span></p>
+                <p class="feature-card__subtitle">The quality of our food is excellent!</p>
+            </article>
+            <article class="feature-card">
+                <img src="./icons/serving-cloche.svg" alt="Serving cloche" loading="lazy">
+                <p class="feature-card__title">Affordable <span class="feature-card-accent">Food</span></p>
+                <p class="feature-card__subtitle">The price of our food depends solely on the quantity. The quality is
+                    always top-notch!</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__left">
+                <div class="about__text">
+                    <h2 class="about__title">
+                        Our <span class="about__title-accent">History</span>
+                    </h2>
+                    <p class="about__description">Like any other unique place, we have our own special story. The idea
+                        for the restaurant came to the founders unexpectedly. While walking through the woods, the
+                        founder of our restaurant found himself stranded hundreds of kilometers from the nearest town.
+                        Far from civilization and communication, they had to quickly set up a simple living situation
+                        for themselves, forage for food, and cook their own meals.</p>
+                </div>
+                <div class="about__stats">
+                    <div class="about__stat">
+                        <span class="about__stat-number">93</span>
+                        <span class="about__stat-label">Drinks</span>
+                    </div>
+                    <div class="about__stat">
+                        <span class="about__stat-number">206</span>
+                        <span class="about__stat-label">Food</span>
+                    </div>
+                    <div class="about__stat">
+                        <span class="about__stat-number">71</span>
+                        <span class="about__stat-label">Appetizers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about__right">
+                <img src="images/indian-food-buffet.png"
+                     alt="Indian food buffet"
+                     width="233"
+                     class="about__image-1"
+                     height="300"
+                     loading="lazy">
+                <img src="images/green-dessert.png"
+                     alt="Green dessert"
+                     width="255"
+                     class="about__image-2"
+                     height="430"
+                     loading="lazy">
+                <img src="images/restaurant-interior-view.png"
+                     alt="Restaurant interior view"
+                     width="254"
+                     height="300"
+                     class="about__image-3"
+                     loading="lazy">
+                <div class="about__image-4"></div>
+            </div>
+        </div>
 
     </section>
 
