@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant landing</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/adaptive.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
 <header class="header">
@@ -22,7 +25,7 @@
                         <a href="#" class="header__nav-link">Main</a>
                     </li>
                     <li>
-                        <a href="#" class="header__nav-link">Menu</a>
+                        <a href="#menu" class="header__nav-link">Menu</a>
                     </li>
                     <li>
                         <a href="#about" class="header__nav-link">About us</a>
@@ -36,7 +39,21 @@
                         </a>
                     </li>
                 </ul>
+
+                <div class="header__nav-mobile-footer">
+                    <a href="tel:+999-888-76-54" class="header__nav-phone">
+                        <img src="icons/phone.svg" alt="Phone" loading="lazy">
+                        <span>+999-888-76-54</span>
+                    </a>
+                    <a href="#" class="btn btn--orange">RESERVE A TABLE</a>
+                </div>
             </nav>
+
+            <button class="header__burger" id="burger">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
 
             <div class="header__contacts">
                 <div class="header__phone-block">
@@ -140,7 +157,6 @@
                 <div class="about__image-4 about__image"></div>
             </div>
         </div>
-
     </section>
 
     <section class="promo">
@@ -192,8 +208,7 @@
         </div>
     </section>
 
-
-    <section class="menu">
+    <section class="menu" id="menu">
         <div class="container">
             <h2 class="menu__title">Our menu</h2>
             <div class="menu__cards">
@@ -237,8 +252,62 @@
             </div>
         </div>
     </section>
+
+    <section class="review">
+        <div class="container">
+            <div class="review__inner">
+                <p class="review__text">I'll always remember my birthday celebration at this restaurant! A little piece
+                    of my beloved Armenia!!! A special thank you for the complimentary fruit platter. We'll be
+                    recommending this restaurant to our friends and relatives abroad who are traveling to St.
+                    Petersburg!!!</p>
+                <div class="review__author">
+                    <img src="images/customer.png"
+                         alt="Customer"
+                         width="150"
+                         height="150"
+                         class="review__img">
+                    <p class="review__author-role">Visitor</p>
+                    <p class="review__author-name">Steve</p>
+                </div>
+            </div>
+            <div class="review__dots">
+                <div class="review__dot"></div>
+                <div class="review__dot"></div>
+                <div class="review__dot review__dot-active"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 class="gallery__title">Gallery of <span class="gallery__title-accent">Dishes</span></h2>
+            <div class="gallery__grid">
+                <img src="images/gallery-1.jpg" alt="Gallery 1" loading="lazy" class="gallery__img gallery__img--wide">
+                <img src="images/gallery-2.jpg" alt="Gallery 2" loading="lazy" class="gallery__img">
+                <img src="images/gallery-3.jpg" alt="Gallery 3" loading="lazy" class="gallery__img">
+                <img src="images/gallery-2.jpg" alt="Gallery 2" loading="lazy" class="gallery__img">
+                <img src="images/gallery-3.jpg" alt="Gallery 3" loading="lazy" class="gallery__img">
+                <img src="images/gallery-1.jpg" alt="Gallery 1" loading="lazy" class="gallery__img gallery__img--wide">
+            </div>
+        </div>
+    </section>
+
+    <section class="employees">
+        <div class="container">
+            <h2 class="employees__title">Our <span class="employees__title-accent">Employees</span></h2>
+            <div class="employees__images">
+                <img src="images/employee-1.png" alt="Employee 1" class="employees__img">
+                <img src="images/employee-2.png" alt="Employee 2" class="employees__img">
+                <img src="images/employee-3.png" alt="Employee 3" class="employees__img">
+            </div>
+            <div class="employees__dots">
+                <div class="employees__dot employees__dot-active"></div>
+                <div class="employees__dot"></div>
+            </div>
+        </div>
+    </section>
 </main>
 
-
+<footer class="footer"></footer>
 </body>
 </html>
