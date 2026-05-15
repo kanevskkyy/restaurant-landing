@@ -120,7 +120,6 @@
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    min-height: 100vh;
     height: 700px;
     margin-top: 10px;
     display: flex;
@@ -142,13 +141,14 @@
 .hero__subtitle {
     color: var(--color-accent);
     font-family: var(--font-secondary);
-    font-size: 50px;
+    font-size: clamp(18px, 2.5vw, 50px);
 }
 
 .hero__title {
+    font-weight: 400;
     color: var(--color-accent);
     font-family: var(--font-secondary);
-    font-size: 80px;
+    font-size: clamp(36px, 5vw, 80px);
     line-height: 1.1;
 }
 
@@ -289,6 +289,10 @@
     flex-shrink: 0;
 }
 
+.about__image{
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.3);
+}
+
 .about__image-1 {
     position: absolute;
     top: 60px;
@@ -318,4 +322,230 @@
     height: 380px;
     background-color: #FFE8D0;
     z-index: 0;
+}
+
+.promo{
+    background-color: var(--color-black);
+    margin-top: 100px;
+}
+
+.promo__inner {
+    background-image: url('../images/apricot-pie-mint.png');
+    background-size: cover;
+    background-position: center;
+    height: 360px;
+    position: relative;
+}
+
+.promo__inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.promo__inner .container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.promo__title {
+    font-family: var(--font-secondary);
+    font-size: 52px;
+    max-width: 600px;
+    color: var(--color-accent);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.promo__subtitle {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.dishes{
+    margin-top: 55px;
+}
+
+.dishes .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+.dishes__title{
+    font-family: var(--font-secondary);
+    font-size: 54px;
+    font-weight: 400;
+}
+
+.dishes__title-accent{
+    color: var(--color-accent);
+}
+
+.dishes__inner{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.dishes__featured-img{
+    width: 445px;
+    object-fit: cover;
+    height: 480px;
+}
+
+.dishes__list{
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.dish-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.dish-item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+}
+
+.dish-item__name{
+    white-space: nowrap;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.dish-item__dots {
+    width: 205px;
+    height: 1px;
+    border-bottom: 1px dashed var(--color-black);
+}
+
+.dish-item__price{
+    white-space: nowrap;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.menu {
+    margin-top: 150px;
+    background-image: url("../images/menu-banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.menu__title{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
+    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: 54px;
+    color: var(--color-white);
+    font-weight: 400;
+}
+
+.menu__cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.menu-card{
+    background-color: var(--color-white);
+    position: relative;
+    padding-top: 40px;
+}
+
+.menu-card__badge{
+    font-family: var(--font-primary);
+    font-size: 13px;
+    color: var(--color-black);
+    background: var(--color-accent);
+    padding: 7px 11px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu-card__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.menu-card__img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-card__price {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    border: 7px solid var(--color-white);
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-card__name {
+    font-family: var(--font-secondary);
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.menu-card__description {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: var(--color-black);
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.menu-card__btn {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    padding: 14px;
+    letter-spacing: 0.05em;
 }
